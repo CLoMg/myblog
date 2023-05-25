@@ -396,7 +396,7 @@
             <div id="articleContent">
                 <h1 id="嵌入式软件架构"><a href="#嵌入式软件架构" class="headerlink" title="嵌入式软件架构"></a>嵌入式软件架构</h1><h2 id="嵌入式软件架构的六个步骤"><a href="#嵌入式软件架构的六个步骤" class="headerlink" title="嵌入式软件架构的六个步骤"></a>嵌入式软件架构的六个步骤</h2><h3 id="1-架构抽象层"><a href="#1-架构抽象层" class="headerlink" title="1. 架构抽象层"></a>1. 架构抽象层</h3><p>抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，抽象层还能够提高软件的可移植性和可重用性，因为它使得软件更易于在不同的硬件平台上运行。</p>
 <p>反思：目前自己写的代码，有很多直接在应用层调用底层代码，耦合程度严重，不符合依赖倒置原则，更换芯片后移植也困难，如下</p>
-<p><img src="/2023/05/25/embeded-software-architecture/Untitled.png"></p>
+<p><img src="/2023/05/25/embeded-software-architecture/Untitled.png" alt="P0"></p>
 <p>解决方法:</p>
 <ol>
 <li>明确依赖倒置原则（高层模块不依赖于底层模块，它们都依赖于抽象）</li>
@@ -411,8 +411,8 @@
 </li>
 </ol>
 <p><em><strong>3、最后实现更换芯片后，只需要修改驱动层，不需要修改应用层和HAL层</strong></em></p>
-<p>![](Untitled 01.png)</p>
-<h2 id="2、-软件基础设施"><a href="#2、-软件基础设施" class="headerlink" title="2、 软件基础设施"></a>2、 软件基础设施</h2><p>![Untitled](Untitled 02.png)</p>
+<p>![P1](Untitled 01.png)</p>
+<h2 id="2、-软件基础设施"><a href="#2、-软件基础设施" class="headerlink" title="2、 软件基础设施"></a>2、 软件基础设施</h2><p>![P2](Untitled 02.png)</p>
 <p>基础设施的内容：</p>
 <p>1、基础类型和宏定义</p>
 <p>2、操作系统</p>
