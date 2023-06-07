@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Embeded-Software-Architecture, CLoMg">
-    <meta name="description" content="嵌入式软件架构嵌入式软件架构的六个步骤1. 架构抽象层抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，">
+    <meta name="keywords" content="分类: -[Linux] -[嵌入式], CLoMg">
+    <meta name="description" content="CLoMg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Embeded-Software-Architecture | CLoMg</title>
+    <title>分类: -[Linux] -[嵌入式] | CLoMg</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -328,423 +328,137 @@
 
 </header>
 
-    
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">Embeded-Software-Architecture</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<main class="post-container content">
-
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
     <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-25
-                </div>
-                
-
-                
-
-                
-
-                
-
+                    subtitle
                 
             </div>
-        </div>
-        <hr class="clearfix">
 
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="嵌入式软件架构"><a href="#嵌入式软件架构" class="headerlink" title="嵌入式软件架构"></a>嵌入式软件架构</h1><h2 id="嵌入式软件架构的六个步骤"><a href="#嵌入式软件架构的六个步骤" class="headerlink" title="嵌入式软件架构的六个步骤"></a>嵌入式软件架构的六个步骤</h2><h3 id="1-架构抽象层"><a href="#1-架构抽象层" class="headerlink" title="1. 架构抽象层"></a>1. 架构抽象层</h3><p>抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，抽象层还能够提高软件的可移植性和可重用性，因为它使得软件更易于在不同的硬件平台上运行。</p>
-<p>反思：目前自己写的代码，有很多直接在应用层调用底层代码，耦合程度严重，不符合依赖倒置原则，更换芯片后移植也困难，如下</p>
-<p><img src="/2023/05/25/embeded-software-architecture/Untitled.png" alt="P0"></p>
-<p>解决方法:</p>
-<ol>
-<li>明确依赖倒置原则（高层模块不依赖于底层模块，它们都依赖于抽象）</li>
-</ol>
-<p>2、进行架构隔离</p>
-<ol>
-<li><p>调用抽象层代码</p>
-<p> <em><strong>应用层永远都调用抽象层，不能跨层调用</strong></em></p>
-</li>
-<li><p>符合依赖倒置原则</p>
-<p> <em><strong>应用层不依赖于固件库，而是依赖于抽象层；驱动模块也按照抽象层的对下接口进行实现。</strong></em></p>
-</li>
-</ol>
-<p><em><strong>3、最后实现更换芯片后，只需要修改驱动层，不需要修改应用层和HAL层</strong></em></p>
-<p><img src="/2023/05/25/embeded-software-architecture/1.png" alt="P1"></p>
-<h2 id="2、-软件基础设施"><a href="#2、-软件基础设施" class="headerlink" title="2、 软件基础设施"></a>2、 软件基础设施</h2><p><img src="/2023/05/25/embeded-software-architecture/2.png" alt="P2"></p>
-<p>基础设施的内容：</p>
-<p>1、基础类型和宏定义</p>
-<p>2、操作系统</p>
-<p>3、中间件（文件系统&#x2F;协议栈&#x2F;数据库等）</p>
-<p>4、库（C库&#x2F; 数学库&#x2F;矩阵库&#x2F;容器库等）</p>
-<p>5、框架（外设驱动框架&#x2F;设备框架&#x2F;状态机框架&#x2F;行为树框架）</p>
-<p>6、工具支持（测试、调试、仿真等软件工具的支持）</p>
-<p>使用统一的软件基础设施的好处</p>
-<p>1、提升软件质量</p>
-<p>2、提升软件复用性</p>
-<p>3、减少软件冗余、避免重复造轮子</p>
-<p>4、有利于团队技术积累</p>
-<p>5、有利于团队的技术培养</p>
-<p>6、是跨平台开发和测试驱动开发的前提</p>
-<h2 id="3、合理识别和管理数据"><a href="#3、合理识别和管理数据" class="headerlink" title="3、合理识别和管理数据"></a>3、合理识别和管理数据</h2><h2 id="4、软件分解"><a href="#4、软件分解" class="headerlink" title="4、软件分解"></a>4、软件分解</h2><p>1、隔离硬件</p>
-<p><img src="/2023/05/25/embeded-software-architecture/3.png" alt="P3"></p>
-<p>这一步主要是将通信口的原始数据，通过硬件抽象层，转换为我们需要的数据（做到上层数据与硬件无关）</p>
-<p>2、按是否实时域分解</p>
-<p>何为实时？一般以响应时间10ms为分界线，见仁见智</p>
-<p>3、按是否安全域分解</p>
-<p>4、机器人的功能域分析</p>
-<p><strong>感知</strong>                          传感器数据</p>
-<p><strong>执行</strong>                      执行机构数据             车体数据                   指令数据</p>
-<p><strong>认知决策</strong>                      任务数据                地图数据                 当前线路数据</p>
-<p><strong>支持</strong>                           错误与警报历史数据                                   配置数据                      日志数据</p>
-<p>5、按任务分解</p>
-<p><img src="/2023/05/25/embeded-software-architecture/4.png" alt="P4"></p>
-<h2 id="5、模块与接口定义"><a href="#5、模块与接口定义" class="headerlink" title="5、模块与接口定义"></a>5、模块与接口定义</h2><p>颗粒度：软件复用的关键！</p>
-<p>软件分层的本质</p>
-<p>接口定义的重要意义</p>
-<p><img src="/2023/05/25/embeded-software-architecture/5.png" alt="P5"></p>
-<h2 id="6、仿真、扩展与迭代"><a href="#6、仿真、扩展与迭代" class="headerlink" title="6、仿真、扩展与迭代"></a>6、仿真、扩展与迭代</h2><p>1、仿真</p>
-<p><img src="/2023/05/25/embeded-software-architecture/6.png" alt="P6"></p>
-<p><img src="/2023/05/25/embeded-software-architecture/Untitled-7.png" alt="P7"></p>
-<blockquote>
-<p><strong>拥有自己的嵌入式软件架构                                                                                                                 1.提升开发效率                                                                                                                                                    2.软件架构并非一日之功                                                                                                                        3.架构师不是最后的目标，是走向其他进阶职位的阶梯</strong></p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.uml.org.cn/embeded/202109141.asp">嵌入式软件架构设计 模块化 &amp; 分层设计 -嵌入式 (uml.org.cn)</a></p>
-
+            <div class="description center-align">
                 
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">CLoMg</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://CLoMg.github.io/2023/05/25/embeded-software-architecture/">http://CLoMg.github.io/2023/05/25/embeded-software-architecture/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">CLoMg</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2023/06/07/linux-wifi-connect/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux wifi connect">
-                        
-                        <span class="card-title">Linux wifi connect</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
                             
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-07
-                        </span>
-                        <span class="publish-author">
+                                "从来没有真正的绝境, 只有心灵的迷途",
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                "Never really desperate, only the lost of the soul",
                             
-                            <a href="/categories/Linux-%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="post-category">
-                                    -[Linux] -[嵌入式]
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
                 
             </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/05/23/my-first-blog-test/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="my first blog test">
-                        
-                        <span class="card-title">my first blog test</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-23
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            CLoMg
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
-<!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
 </script>
 
+
+    </div>
+</div>
+
+<main class="content">
+
     
 
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/Linux-%E5%B5%8C%E5%85%A5%E5%BC%8F/" title="-[Linux] -[嵌入式]: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F9EBEA;">-[Linux] -[嵌入式]
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/06/07/linux-wifi-connect/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux wifi connect">
+                            
+                            <span class="card-title">Linux wifi connect</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Linux wifi 连接wifi 开启&#x2F;关闭
+ifconfig -a &#x2F;&#x2F;查看网络设备
+ifconfig wlan0 up  &#x2F;&#x2F;开启wifi中间启动失败的问题，经查看日志，发现wifi驱
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Linux-%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="post-category">
+                                    -[Linux] -[嵌入式]
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
 
 
