@@ -13,10 +13,20 @@
       
       <categories>
           
-          <category> -[Linux] -[嵌入式] </category>
+          <category> Linux </category>
+          
+          <category> 嵌入式 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> wifi </tag>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
       
     </entry>
     
