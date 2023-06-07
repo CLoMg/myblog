@@ -53,6 +53,12 @@
         <content type="html"><![CDATA[<p>This is my first blog!<br>From zero to hero~</p>]]></content>
       
       
+      <categories>
+          
+          <category> Hexo Test </category>
+          
+      </categories>
+      
       
     </entry>
     
