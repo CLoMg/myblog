@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Linux wifi connect</title>
+    <link href="/2023/06/07/linux-wifi-connect/"/>
+    <url>/2023/06/07/linux-wifi-connect/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Linux-wifi-连接"><a href="#Linux-wifi-连接" class="headerlink" title="Linux wifi 连接"></a>Linux wifi 连接</h1><h2 id="wifi-开启-x2F-关闭"><a href="#wifi-开启-x2F-关闭" class="headerlink" title="wifi 开启&#x2F;关闭"></a>wifi 开启&#x2F;关闭</h2><ol><li>ifconfig -a &#x2F;&#x2F;查看网络设备</li><li>ifconfig wlan0 up  &#x2F;&#x2F;开启wifi<br>中间启动失败的问题，经查看日志，发现wifi驱动的 .bin 文件无法打开，将对应版本文件copy到文件夹中，即可正常打开</li></ol><h2 id="wifi-搜索"><a href="#wifi-搜索" class="headerlink" title="wifi 搜索"></a>wifi 搜索</h2><ol><li>iw wlan0 scan |grep SSID  &#x2F;&#x2F;搜索wifi热点，并显示SSID</li></ol><h2 id="wifi配置"><a href="#wifi配置" class="headerlink" title="wifi配置"></a>wifi配置</h2><ol><li>wpa_passphrase [SSID] [KEYS] &gt;&gt; &#x2F;etc&#x2F;wpa_supplicant.conf &#x2F;&#x2F; 将wifi信息写入配置文件</li><li>wpa_supplicant -B -i wlan0 -c &#x2F;etc&#x2F;wpa_supplicant.conf &#x2F;&#x2F;启动应用 [-B 后台运行] [-i 接口名称] [-c 配置文件][-D 驱动程序名称]</li><li>iw dev wlan0 link &#x2F;&#x2F;回复wifi连接状态</li><li>udhcpc &#x2F;&#x2F;自动获取ip</li><li>ifconfig wlan0 [ip] &#x2F;&#x2F;自动获取ip失败后，可手动配置</li></ol><h2 id="wifi连接后，无法ping通外网"><a href="#wifi连接后，无法ping通外网" class="headerlink" title="wifi连接后，无法ping通外网"></a>wifi连接后，无法ping通外网</h2><ol><li>可能是网关未设置<br>route  &#x2F;&#x2F;列出路由信息</li><li>route add default gw [gw_addr] &#x2F;&#x2F;配置网关地址</li></ol><h2 id="关于wpa-supplicant-WIFI工具"><a href="#关于wpa-supplicant-WIFI工具" class="headerlink" title="关于wpa_supplicant(WIFI工具)"></a>关于wpa_supplicant(WIFI工具)</h2><p>wpa_supplicant是一个连接、配置WIFI的工具，它主要包含wpa_supplicant与wpa_cli两个程序,pa_supplicant是核心程序，它和wpa_cli的关系就是服务和客户端的关系：后台运行wpa_supplicant，<br>使用wpa_cli来搜索、设置、和连接网络.</p><ol><li><p>启动wpa_supplicant应用:<br> wpa_supplicant -Dnl80211  -c &#x2F;etc&#x2F;wpa_supplicant.conf -i wlan0  -B<br>-D 驱动程序名称（指定WiFi驱动程序：nl80211，wext）<br>-i 接口名称<br>-c 配置文件　<br>-B 在后台运行守护进程<br>-d &#x3D; increase debugging verbosity (-dd even more)<br>不支持82011用法：<br>wpa_supplicant -D wext -c &#x2F;etc&#x2F;wpa_supplicant.conf -i wlan0 &amp;</p></li><li><p>启动wpa_cli<br>wpa_cli -i wlan0 scan         　&#x2F;&#x2F;搜索附件wifi热点<br>wpa_cli -i wlan0 scan_result 　 &#x2F;&#x2F;显示搜索wifi热点<br>wpa_cli -i wlan0 status        &#x2F;&#x2F;当前WPA&#x2F;EAPOL&#x2F;EAP通讯状态<br>wpa_cli -i wlan0 ping          &#x2F;&#x2F;pings wpa_supplicant</p></li><li><p>添加新的连接<br>wpa_cli -i wlan0 add_network   &#x2F;&#x2F;添加一个网络连接,会返回<network id><br>wpa_cli set_network <network id>  ssid ‘“name”‘  &#x2F;&#x2F;ssid名称<br>wpa_cli set_network <network id>  psk ‘“psk”’　　&#x2F;&#x2F;密码<br>wpa_cli set_network <network id>  scan_ssid 1<br>wpa_cli set_network <network id>  priority  1   &#x2F;&#x2F;优先级</p></li><li><p>保存连接<br>wpa_cli -i wlan0 save_config   &#x2F;&#x2F;信息保存到默认的配置文件中</p></li><li><p>连接已有连接<br>wpa_cli -i wlan0 list_network  &#x2F;&#x2F;列举保存过得连接<br>wpa_cli -i wlan0 select_network  <network id>  &#x2F;&#x2F;连接指定的ssid </p></li><li><p>save_config之后的wpa_supplicant.conf文件示例:<br>ctrl_interface&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant&#x2F;<br>ap_scan&#x3D;1<br>network&#x3D;{<br> scan_ssid&#x3D;1<br> ssid&#x3D;”xxxx”<br> psk&#x3D;”xxxx”<br> priority&#x3D;2 &#x2F;&#x2F;wifi连接优先级<br>}</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>嵌入式</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>wifi</tag>
+      
+      <tag>网络</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Embeded-Software-Architecture</title>
+    <link href="/2023/05/25/embeded-software-architecture/"/>
+    <url>/2023/05/25/embeded-software-architecture/</url>
+    
+    <content type="html"><![CDATA[<h1 id="嵌入式软件架构"><a href="#嵌入式软件架构" class="headerlink" title="嵌入式软件架构"></a>嵌入式软件架构</h1><h2 id="嵌入式软件架构的六个步骤"><a href="#嵌入式软件架构的六个步骤" class="headerlink" title="嵌入式软件架构的六个步骤"></a>嵌入式软件架构的六个步骤</h2><h3 id="1-架构抽象层"><a href="#1-架构抽象层" class="headerlink" title="1. 架构抽象层"></a>1. 架构抽象层</h3><p>抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，抽象层还能够提高软件的可移植性和可重用性，因为它使得软件更易于在不同的硬件平台上运行。</p><p>反思：目前自己写的代码，有很多直接在应用层调用底层代码，耦合程度严重，不符合依赖倒置原则，更换芯片后移植也困难，如下</p><p><img src="/2023/05/25/embeded-software-architecture/Untitled.png" alt="P0"></p><p>解决方法:</p><ol><li>明确依赖倒置原则（高层模块不依赖于底层模块，它们都依赖于抽象）</li></ol><p>2、进行架构隔离</p><ol><li><p>调用抽象层代码</p><p> <em><strong>应用层永远都调用抽象层，不能跨层调用</strong></em></p></li><li><p>符合依赖倒置原则</p><p> <em><strong>应用层不依赖于固件库，而是依赖于抽象层；驱动模块也按照抽象层的对下接口进行实现。</strong></em></p></li></ol><p><em><strong>3、最后实现更换芯片后，只需要修改驱动层，不需要修改应用层和HAL层</strong></em></p><p><img src="/2023/05/25/embeded-software-architecture/1.png" alt="P1"></p><h2 id="2、-软件基础设施"><a href="#2、-软件基础设施" class="headerlink" title="2、 软件基础设施"></a>2、 软件基础设施</h2><p><img src="/2023/05/25/embeded-software-architecture/2.png" alt="P2"></p><p>基础设施的内容：</p><p>1、基础类型和宏定义</p><p>2、操作系统</p><p>3、中间件（文件系统&#x2F;协议栈&#x2F;数据库等）</p><p>4、库（C库&#x2F; 数学库&#x2F;矩阵库&#x2F;容器库等）</p><p>5、框架（外设驱动框架&#x2F;设备框架&#x2F;状态机框架&#x2F;行为树框架）</p><p>6、工具支持（测试、调试、仿真等软件工具的支持）</p><p>使用统一的软件基础设施的好处</p><p>1、提升软件质量</p><p>2、提升软件复用性</p><p>3、减少软件冗余、避免重复造轮子</p><p>4、有利于团队技术积累</p><p>5、有利于团队的技术培养</p><p>6、是跨平台开发和测试驱动开发的前提</p><h2 id="3、合理识别和管理数据"><a href="#3、合理识别和管理数据" class="headerlink" title="3、合理识别和管理数据"></a>3、合理识别和管理数据</h2><h2 id="4、软件分解"><a href="#4、软件分解" class="headerlink" title="4、软件分解"></a>4、软件分解</h2><p>1、隔离硬件</p><p><img src="/2023/05/25/embeded-software-architecture/3.png" alt="P3"></p><p>这一步主要是将通信口的原始数据，通过硬件抽象层，转换为我们需要的数据（做到上层数据与硬件无关）</p><p>2、按是否实时域分解</p><p>何为实时？一般以响应时间10ms为分界线，见仁见智</p><p>3、按是否安全域分解</p><p>4、机器人的功能域分析</p><p><strong>感知</strong>                          传感器数据</p><p><strong>执行</strong>                      执行机构数据             车体数据                   指令数据</p><p><strong>认知决策</strong>                      任务数据                地图数据                 当前线路数据</p><p><strong>支持</strong>                           错误与警报历史数据                                   配置数据                      日志数据</p><p>5、按任务分解</p><p><img src="/2023/05/25/embeded-software-architecture/4.png" alt="P4"></p><h2 id="5、模块与接口定义"><a href="#5、模块与接口定义" class="headerlink" title="5、模块与接口定义"></a>5、模块与接口定义</h2><p>颗粒度：软件复用的关键！</p><p>软件分层的本质</p><p>接口定义的重要意义</p><p><img src="/2023/05/25/embeded-software-architecture/5.png" alt="P5"></p><h2 id="6、仿真、扩展与迭代"><a href="#6、仿真、扩展与迭代" class="headerlink" title="6、仿真、扩展与迭代"></a>6、仿真、扩展与迭代</h2><p>1、仿真</p><p><img src="/2023/05/25/embeded-software-architecture/6.png" alt="P6"></p><p><img src="/2023/05/25/embeded-software-architecture/Untitled-7.png" alt="P7"></p><blockquote><p><strong>拥有自己的嵌入式软件架构                                                                                                                 1.提升开发效率                                                                                                                                                    2.软件架构并非一日之功                                                                                                                        3.架构师不是最后的目标，是走向其他进阶职位的阶梯</strong></p></blockquote><p><a href="http://www.uml.org.cn/embeded/202109141.asp">嵌入式软件架构设计 模块化 &amp; 分层设计 -嵌入式 (uml.org.cn)</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/05/23/hello-world/"/>
+    <url>/2023/05/23/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs bash">$ hexo new <span class="hljs-string"><code class="language-hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs bash"><code class="language-hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs bash"><code class="language-hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs bash"><code class="language-hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>

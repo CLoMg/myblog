@@ -1,605 +1,492 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"clomg.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CLoMg">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
 <meta property="og:title" content="CLoMg">
 <meta property="og:url" content="http://clomg.github.io/index.html">
 <meta property="og:site_name" content="CLoMg">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="CLoMg">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://clomg.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
   <title>CLoMg</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"clomg.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
 
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+  
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+  <header>
+    
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">CLoMg</h1>
-      <span class="logo-line-after"><i></i></span>
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>CLoMG</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+  
 
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="日拱一卒，功不唐捐"></span>
+          
+        </div>
 
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
 
 </div>
-    </header>
 
+  </header>
+
+  <main>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
           
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
 
-          <div class="content index posts-expand">
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/06/07/linux-wifi-connect/" target="_self">
+          Linux wifi connect
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/06/07/linux-wifi-connect/" target="_self">
+        <div>
+          Linux wifi 连接wifi 开启&#x2F;关闭 ifconfig -a &#x2F;&#x2F;查看网络设备 ifconfig wlan0 up  &#x2F;&#x2F;开启wifi中间启动失败的问题，经查看日志，发现wifi驱动的 .bin 文件无法打开，将对应版本文件copy到文件夹中，即可正常打开  wifi 搜索 iw wlan0 scan |grep SSID  &#x2F;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-06-07 15:02" pubdate>
+              2023-06-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
             
-      
+
+<span class="category-chains">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://clomg.github.io/2023/06/07/linux-wifi-connect/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="CLoMg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CLoMg">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/07/linux-wifi-connect/" class="post-title-link" itemprop="url">Linux wifi connect</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-07 15:02:56 / 修改时间：16:09:47" itemprop="dateCreated datePublished" datetime="2023-06-07T15:02:56+08:00">2023-06-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Linux-wifi-连接"><a href="#Linux-wifi-连接" class="headerlink" title="Linux wifi 连接"></a>Linux wifi 连接</h1><h2 id="wifi-开启-x2F-关闭"><a href="#wifi-开启-x2F-关闭" class="headerlink" title="wifi 开启&#x2F;关闭"></a>wifi 开启&#x2F;关闭</h2><ol>
-<li>ifconfig -a &#x2F;&#x2F;查看网络设备</li>
-<li>ifconfig wlan0 up  &#x2F;&#x2F;开启wifi<br>中间启动失败的问题，经查看日志，发现wifi驱动的 .bin 文件无法打开，将对应版本文件copy到文件夹中，即可正常打开</li>
-</ol>
-<h2 id="wifi-搜索"><a href="#wifi-搜索" class="headerlink" title="wifi 搜索"></a>wifi 搜索</h2><ol>
-<li>iw wlan0 scan |grep SSID  &#x2F;&#x2F;搜索wifi热点，并显示SSID</li>
-</ol>
-<h2 id="wifi配置"><a href="#wifi配置" class="headerlink" title="wifi配置"></a>wifi配置</h2><ol>
-<li>wpa_passphrase [SSID] [KEYS] &gt;&gt; &#x2F;etc&#x2F;wpa_supplicant.conf &#x2F;&#x2F; 将wifi信息写入配置文件</li>
-<li>wpa_supplicant -B -i wlan0 -c &#x2F;etc&#x2F;wpa_supplicant.conf &#x2F;&#x2F;启动应用 [-B 后台运行] [-i 接口名称] [-c 配置文件][-D 驱动程序名称]</li>
-<li>iw dev wlan0 link &#x2F;&#x2F;回复wifi连接状态</li>
-<li>udhcpc &#x2F;&#x2F;自动获取ip</li>
-<li>ifconfig wlan0 [ip] &#x2F;&#x2F;自动获取ip失败后，可手动配置</li>
-</ol>
-<h2 id="wifi连接后，无法ping通外网"><a href="#wifi连接后，无法ping通外网" class="headerlink" title="wifi连接后，无法ping通外网"></a>wifi连接后，无法ping通外网</h2><ol>
-<li>可能是网关未设置<br>route  &#x2F;&#x2F;列出路由信息</li>
-<li>route add default gw [gw_addr] &#x2F;&#x2F;配置网关地址</li>
-</ol>
-<h2 id="关于wpa-supplicant-WIFI工具"><a href="#关于wpa-supplicant-WIFI工具" class="headerlink" title="关于wpa_supplicant(WIFI工具)"></a>关于wpa_supplicant(WIFI工具)</h2><p>wpa_supplicant是一个连接、配置WIFI的工具，它主要包含wpa_supplicant与wpa_cli两个程序,pa_supplicant是核心程序，它和wpa_cli的关系就是服务和客户端的关系：后台运行wpa_supplicant，<br>使用wpa_cli来搜索、设置、和连接网络.</p>
-<ol>
-<li><p>启动wpa_supplicant应用:<br> wpa_supplicant -Dnl80211  -c &#x2F;etc&#x2F;wpa_supplicant.conf -i wlan0  -B<br>-D 驱动程序名称（指定WiFi驱动程序：nl80211，wext）<br>-i 接口名称<br>-c 配置文件　<br>-B 在后台运行守护进程<br>-d &#x3D; increase debugging verbosity (-dd even more)<br>不支持82011用法：<br>wpa_supplicant -D wext -c &#x2F;etc&#x2F;wpa_supplicant.conf -i wlan0 &amp;</p>
-</li>
-<li><p>启动wpa_cli<br>wpa_cli -i wlan0 scan         　&#x2F;&#x2F;搜索附件wifi热点<br>wpa_cli -i wlan0 scan_result 　 &#x2F;&#x2F;显示搜索wifi热点<br>wpa_cli -i wlan0 status        &#x2F;&#x2F;当前WPA&#x2F;EAPOL&#x2F;EAP通讯状态<br>wpa_cli -i wlan0 ping          &#x2F;&#x2F;pings wpa_supplicant</p>
-</li>
-<li><p>添加新的连接<br>wpa_cli -i wlan0 add_network   &#x2F;&#x2F;添加一个网络连接,会返回<network id><br>wpa_cli set_network <network id>  ssid ‘“name”‘  &#x2F;&#x2F;ssid名称<br>wpa_cli set_network <network id>  psk ‘“psk”’　　&#x2F;&#x2F;密码<br>wpa_cli set_network <network id>  scan_ssid 1<br>wpa_cli set_network <network id>  priority  1   &#x2F;&#x2F;优先级</p>
-</li>
-<li><p>保存连接<br>wpa_cli -i wlan0 save_config   &#x2F;&#x2F;信息保存到默认的配置文件中</p>
-</li>
-<li><p>连接已有连接<br>wpa_cli -i wlan0 list_network  &#x2F;&#x2F;列举保存过得连接<br>wpa_cli -i wlan0 select_network  <network id>  &#x2F;&#x2F;连接指定的ssid </p>
-</li>
-<li><p>save_config之后的wpa_supplicant.conf文件示例:<br>ctrl_interface&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant&#x2F;<br>ap_scan&#x3D;1<br>network&#x3D;{<br> scan_ssid&#x3D;1<br> ssid&#x3D;”xxxx”<br> psk&#x3D;”xxxx”<br> priority&#x3D;2 &#x2F;&#x2F;wifi连接优先级<br>}</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
+      <span class="category-chain">
+        
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Linux/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="category-chain-item">嵌入式</a>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://clomg.github.io/2023/05/25/embeded-software-architecture/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="CLoMg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CLoMg">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/25/embeded-software-architecture/" class="post-title-link" itemprop="url">Embeded-Software-Architecture</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-05-25 16:21:07 / 修改时间：16:55:38" itemprop="dateCreated datePublished" datetime="2023-05-25T16:21:07+08:00">2023-05-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="嵌入式软件架构"><a href="#嵌入式软件架构" class="headerlink" title="嵌入式软件架构"></a>嵌入式软件架构</h1><h2 id="嵌入式软件架构的六个步骤"><a href="#嵌入式软件架构的六个步骤" class="headerlink" title="嵌入式软件架构的六个步骤"></a>嵌入式软件架构的六个步骤</h2><h3 id="1-架构抽象层"><a href="#1-架构抽象层" class="headerlink" title="1. 架构抽象层"></a>1. 架构抽象层</h3><p>抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，抽象层还能够提高软件的可移植性和可重用性，因为它使得软件更易于在不同的硬件平台上运行。</p>
-<p>反思：目前自己写的代码，有很多直接在应用层调用底层代码，耦合程度严重，不符合依赖倒置原则，更换芯片后移植也困难，如下</p>
-<p><img src="/2023/05/25/embeded-software-architecture/Untitled.png" alt="P0"></p>
-<p>解决方法:</p>
-<ol>
-<li>明确依赖倒置原则（高层模块不依赖于底层模块，它们都依赖于抽象）</li>
-</ol>
-<p>2、进行架构隔离</p>
-<ol>
-<li><p>调用抽象层代码</p>
-<p> <em><strong>应用层永远都调用抽象层，不能跨层调用</strong></em></p>
-</li>
-<li><p>符合依赖倒置原则</p>
-<p> <em><strong>应用层不依赖于固件库，而是依赖于抽象层；驱动模块也按照抽象层的对下接口进行实现。</strong></em></p>
-</li>
-</ol>
-<p><em><strong>3、最后实现更换芯片后，只需要修改驱动层，不需要修改应用层和HAL层</strong></em></p>
-<p><img src="/2023/05/25/embeded-software-architecture/1.png" alt="P1"></p>
-<h2 id="2、-软件基础设施"><a href="#2、-软件基础设施" class="headerlink" title="2、 软件基础设施"></a>2、 软件基础设施</h2><p><img src="/2023/05/25/embeded-software-architecture/2.png" alt="P2"></p>
-<p>基础设施的内容：</p>
-<p>1、基础类型和宏定义</p>
-<p>2、操作系统</p>
-<p>3、中间件（文件系统&#x2F;协议栈&#x2F;数据库等）</p>
-<p>4、库（C库&#x2F; 数学库&#x2F;矩阵库&#x2F;容器库等）</p>
-<p>5、框架（外设驱动框架&#x2F;设备框架&#x2F;状态机框架&#x2F;行为树框架）</p>
-<p>6、工具支持（测试、调试、仿真等软件工具的支持）</p>
-<p>使用统一的软件基础设施的好处</p>
-<p>1、提升软件质量</p>
-<p>2、提升软件复用性</p>
-<p>3、减少软件冗余、避免重复造轮子</p>
-<p>4、有利于团队技术积累</p>
-<p>5、有利于团队的技术培养</p>
-<p>6、是跨平台开发和测试驱动开发的前提</p>
-<h2 id="3、合理识别和管理数据"><a href="#3、合理识别和管理数据" class="headerlink" title="3、合理识别和管理数据"></a>3、合理识别和管理数据</h2><h2 id="4、软件分解"><a href="#4、软件分解" class="headerlink" title="4、软件分解"></a>4、软件分解</h2><p>1、隔离硬件</p>
-<p><img src="/2023/05/25/embeded-software-architecture/3.png" alt="P3"></p>
-<p>这一步主要是将通信口的原始数据，通过硬件抽象层，转换为我们需要的数据（做到上层数据与硬件无关）</p>
-<p>2、按是否实时域分解</p>
-<p>何为实时？一般以响应时间10ms为分界线，见仁见智</p>
-<p>3、按是否安全域分解</p>
-<p>4、机器人的功能域分析</p>
-<p><strong>感知</strong>                          传感器数据</p>
-<p><strong>执行</strong>                      执行机构数据             车体数据                   指令数据</p>
-<p><strong>认知决策</strong>                      任务数据                地图数据                 当前线路数据</p>
-<p><strong>支持</strong>                           错误与警报历史数据                                   配置数据                      日志数据</p>
-<p>5、按任务分解</p>
-<p><img src="/2023/05/25/embeded-software-architecture/4.png" alt="P4"></p>
-<h2 id="5、模块与接口定义"><a href="#5、模块与接口定义" class="headerlink" title="5、模块与接口定义"></a>5、模块与接口定义</h2><p>颗粒度：软件复用的关键！</p>
-<p>软件分层的本质</p>
-<p>接口定义的重要意义</p>
-<p><img src="/2023/05/25/embeded-software-architecture/5.png" alt="P5"></p>
-<h2 id="6、仿真、扩展与迭代"><a href="#6、仿真、扩展与迭代" class="headerlink" title="6、仿真、扩展与迭代"></a>6、仿真、扩展与迭代</h2><p>1、仿真</p>
-<p><img src="/2023/05/25/embeded-software-architecture/6.png" alt="P6"></p>
-<p><img src="/2023/05/25/embeded-software-architecture/Untitled-7.png" alt="P7"></p>
-<blockquote>
-<p><strong>拥有自己的嵌入式软件架构                                                                                                                 1.提升开发效率                                                                                                                                                    2.软件架构并非一日之功                                                                                                                        3.架构师不是最后的目标，是走向其他进阶职位的阶梯</strong></p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.uml.org.cn/embeded/202109141.asp">嵌入式软件架构设计 模块化 &amp; 分层设计 -嵌入式 (uml.org.cn)</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://clomg.github.io/2023/05/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="CLoMg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CLoMg">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/23/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-23 16:50:12" itemprop="dateCreated datePublished" datetime="2023-05-23T16:50:12+08:00">2023-05-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-07 16:59:40" itemprop="dateModified" datetime="2023-06-07T16:59:40+08:00">2023-06-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
+      </span>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   
-  
-  
-
-
-  
-
-
+</span>
 
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/wifi/">#wifi</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C/">#网络</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">CLoMg</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+        <a href="/2023/05/25/embeded-software-architecture/" target="_self">
+          Embeded-Software-Architecture
         </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/25/embeded-software-architecture/" target="_self">
+        <div>
+          嵌入式软件架构嵌入式软件架构的六个步骤1. 架构抽象层抽象层是嵌入式软件架构中最重要的一个步骤。它提供了一个关注点分离的方法，将底层硬件和顶层应用程序隔离开来。这种隔离使得应用程序更易于编写和维护，同时也使得底层硬件更易于更换和升级。此外，抽象层还能够提高软件的可移植性和可重用性，因为它使得软件更易于在不同的硬件平台上运行。 反思：目前自己写的代码，有很多直接在应用层调用底层代码，耦合程度严重，不
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-05-25 16:21" pubdate>
+              2023-05-25
+            </time>
+          </div>
+        
+        
+        
       </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/05/23/hello-world/" target="_self">
+          Hello World
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/05/23/hello-world/" target="_self">
+        <div>
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-05-23 16:50" pubdate>
+              2023-05-23
+            </time>
+          </div>
+        
+        
+        
       </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
+    </article>
+  </div>
 
 
 
-      </div>
 
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">CLoMg</span>
+  </div>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
-        
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/CLoMg" target="_blank" rel="nofollow noopener"><span>CLoMG</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
 
 
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-
-
-
-
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
