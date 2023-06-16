@@ -314,11 +314,11 @@
 </li>
 <li><p>启动wpa_cli<br>wpa_cli -i wlan0 scan         　&#x2F;&#x2F;搜索附件wifi热点<br>wpa_cli -i wlan0 scan_result 　 &#x2F;&#x2F;显示搜索wifi热点<br>wpa_cli -i wlan0 status        &#x2F;&#x2F;当前WPA&#x2F;EAPOL&#x2F;EAP通讯状态<br>wpa_cli -i wlan0 ping          &#x2F;&#x2F;pings wpa_supplicant</p>
 </li>
-<li><p>添加新的连接<br>wpa_cli -i wlan0 add_network   &#x2F;&#x2F;添加一个网络连接,会返回<network id><br>wpa_cli set_network <network id>  ssid ‘“name”‘  &#x2F;&#x2F;ssid名称<br>wpa_cli set_network <network id>  psk ‘“psk”’　　&#x2F;&#x2F;密码<br>wpa_cli set_network <network id>  scan_ssid 1<br>wpa_cli set_network <network id>  priority  1   &#x2F;&#x2F;优先级</p>
+<li><p>添加新的连接<br>wpa_cli -i wlan0 add_network   &#x2F;&#x2F;添加一个网络连接,会返回<network id><br>wpa_cli set_network <network id>  ssid ‘“name”‘  &#x2F;&#x2F;ssid名称<br>wpa_cli set_network <network id>  psk ‘“psk”’　　&#x2F;&#x2F;密码<br>wpa_cli set_network <network id>  scan_ssid 1<br>wpa_cli set_network <network id>  priority  1   &#x2F;&#x2F;优先级</network></network></network></network></network></p>
 </li>
 <li><p>保存连接<br>wpa_cli -i wlan0 save_config   &#x2F;&#x2F;信息保存到默认的配置文件中</p>
 </li>
-<li><p>连接已有连接<br>wpa_cli -i wlan0 list_network  &#x2F;&#x2F;列举保存过得连接<br>wpa_cli -i wlan0 select_network  <network id>  &#x2F;&#x2F;连接指定的ssid </p>
+<li><p>连接已有连接<br>wpa_cli -i wlan0 list_network  &#x2F;&#x2F;列举保存过得连接<br>wpa_cli -i wlan0 select_network  <network id>  &#x2F;&#x2F;连接指定的ssid </network></p>
 </li>
 <li><p>save_config之后的wpa_supplicant.conf文件示例:<br>ctrl_interface&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant&#x2F;<br>ap_scan&#x3D;1<br>network&#x3D;{<br> scan_ssid&#x3D;1<br> ssid&#x3D;”xxxx”<br> psk&#x3D;”xxxx”<br> priority&#x3D;2 &#x2F;&#x2F;wifi连接优先级<br>}</p>
 </li>

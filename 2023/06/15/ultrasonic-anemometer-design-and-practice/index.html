@@ -23,38 +23,38 @@
 <meta property="og:site_name" content="CLoMg">
 <meta property="og:description" content="简介超声波风速风向测量仪是青站中最有趣的传感器之一。然而，对于我来说也是一个非常具有挑战性的任务，因为我在模拟电路设计方面几乎没有经验，而风速风向测量仪需要同时涉及模拟放大和大量的数据处理（起初我甚至不知道如何使用运放）。 Anemometer by Hardy Lau是一篇我学习了一次又一次的博客。这篇博客非常详细，并已经涵盖了构建自己的超声波风速风向测量仪所需的大部分知识。 工作原理简述：当超">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/ultrasonic_anemometer_principle.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/QingStation-CDF.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_multiple_sound_path.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer-sch.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/max3232_driver_noise.jpg">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_noise.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_signal_distorsion.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_digital_filter_response.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_excitation.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_final_beam.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_misaligned_peaks.svg">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_zero_point.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_zero_offset_example.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/first_windspeed_measurement.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_speed_of_sound.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_mse_threshold.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_processing3_demo.gif">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_windspeed_measurement.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_keep_out_zone.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment2.jpg">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment1.jpg">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_gnss_vs_wind.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_windspeed.png">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment3.jpg">
-<meta property="og:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/anemometer_motorway_rain.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/ultrasonic_anemometer_principle.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/QingStation-CDF.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_multiple_sound_path.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer-sch.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/max3232_driver_noise.jpg">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_noise.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_signal_distorsion.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_digital_filter_response.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_excitation.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_final_beam.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_misaligned_peaks.svg">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_zero_point.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_zero_offset_example.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/first_windspeed_measurement.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_speed_of_sound.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_mse_threshold.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_processing3_demo.gif">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_windspeed_measurement.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_keep_out_zone.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_car_experiment2.jpg">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_car_experiment1.jpg">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_gnss_vs_wind.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_car_windspeed.png">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_car_experiment3.jpg">
+<meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_motorway_rain.png">
 <meta property="article:published_time" content="2023-06-15T09:07:00.000Z">
-<meta property="article:modified_time" content="2023-06-16T01:06:02.139Z">
+<meta property="article:modified_time" content="2023-06-16T02:23:28.683Z">
 <meta property="article:author" content="CLoMg">
 <meta property="article:tag" content="风速风向">
 <meta property="article:tag" content="超声波">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://clomg.github.io/Ultrasonic-Anemometer-Design-and-Practice/ultrasonic_anemometer_principle.png">
+<meta name="twitter:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/ultrasonic_anemometer_principle.png">
   
   
   
@@ -325,7 +325,7 @@
 <li>DIY（自己动手制作）的难度适中，成本较低，而且Hardy的博客提供了很好的指导。</li>
 <li>它没有移动部件！移动部件不太容易DIY，特别是在防水方面。</li>
 </ul>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h2><p><img src="/Ultrasonic-Anemometer-Design-and-Practice/ultrasonic_anemometer_principle.png" srcset="/img/loading.gif" lazyload alt="ultrasonic_anemometer_principle"></p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h2><p><img src="ultrasonic_anemometer_principle.png" srcset="/img/loading.gif" lazyload alt="ultrasonic_anemometer_principle"></p>
 <p>原理非常简单，声波在介质（空气）中的传播受到介质运动的影响。通过已知的传播路径和传播时间，我们可以计算介质的速度。</p>
 <p>在上面的图中，我们可以看到风的运动BC与声波传播AB相加，形成了传播路径AC。</p>
 <p><a target="_blank" rel="noopener" href="https://www.dl1glh.de/ultrasonic-anemometer.html#advancement">Lau</a><br>在其发布的所有相关方程式中提供了详细说明（使用了不同的符号表示）。 </p>
@@ -338,7 +338,7 @@
 <h3 id="机械设计"><a href="#机械设计" class="headerlink" title="机械设计"></a>机械设计</h3><h4 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h4><p>我使用 <a target="_blank" rel="noopener" href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a> 来设计硬件，并使用我的旧3D打印机来制造它们。</p>
 <p>超声波探头位于顶部并向下方放置。<br>反射板是一个平整的表面。<br>电子元件和其他传感器位于探头上方的一个屏蔽盒内。</p>
 <p>我甚至使用<a target="_blank" rel="noopener" href="https://www.simscale.com/">Simscale</a>来做了一个气流模拟实验。<br>空气流速设置为<code>30m/s</code>，相当于<code>~58节</code>，空气流速相当于一场风暴的中心。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/QingStation-CDF.png" srcset="/img/loading.gif" lazyload alt="QingStation-CDF"></p>
+<p><img src="QingStation-CDF.png" srcset="/img/loading.gif" lazyload alt="QingStation-CDF"></p>
 <p>如你所视，顶部和反射面之间的空气流动实际上快了约<code>3m/s</code>。我不确定我们是否需要在后续处理中考虑这一点。<br>由于我无法接触到风洞，所以无法在完美的实验环境中进行测试。</p>
 <h4 id="声程"><a href="#声程" class="headerlink" title="声程"></a>声程</h4><p>正如简介中所示，理想情况下声波会沿着注明的路径传播。但实际情况则不同。</p>
 <ul>
@@ -347,9 +347,9 @@
 <li>3D打印的塑料是坚硬而轻巧的，非常适合放大声音。反射板也可能充当扬声器。</li>
 </ul>
 <p>这在Lau的作品中并不是问题，因为他的风速风向仪是基于金属框架的。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_multiple_sound_path.png" srcset="/img/loading.gif" lazyload alt="anemometer_multiple_sound_path"></p>
+<p><img src="anemometer_multiple_sound_path.png" srcset="/img/loading.gif" lazyload alt="anemometer_multiple_sound_path"></p>
 <p>这些声波可以在接收信号中看到。添加一些硬币作为配重可能有助于减小其他声波的幅度。</p>
-<h3 id="超声波换能器-驱动"><a href="#超声波换能器-驱动" class="headerlink" title="超声波换能器, 驱动"></a>超声波换能器, 驱动</h3><p>下图是第二版原理图(PCB v1.1), 将在下面的章节阐述一些细节问题。<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer-sch.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="超声波换能器-驱动"><a href="#超声波换能器-驱动" class="headerlink" title="超声波换能器, 驱动"></a>超声波换能器, 驱动</h3><p>下图是第二版原理图(PCB v1.1), 将在下面的章节阐述一些细节问题。<br><img src="anemometer-sch.png" srcset="/img/loading.gif" lazyload></p>
 <p>使用一个低电压的4052模拟开关控制选择哪个通道作为输出，哪个通道用来监听回波。激励信号由定时器的PWM通道产生，而回波输出则经过运放放大并由ADC测量。</p>
 <h4 id="换能器"><a href="#换能器" class="headerlink" title="换能器"></a>换能器</h4><p>我从淘宝购买了几种不同的部件进行测试，它们分别是：</p>
 <ul>
@@ -378,10 +378,10 @@
 <p>然而，这些芯片引入了一个来自驱动器方面的干扰问题。</p>
 <p>MAX3222通过一个1uF电容器从其中一个输出通道驱动换能器。在接收器（换能器）一侧，通过一组钳位二极管到地和电阻，来确保信号不会传回到驱动器一侧。此外，另一组串联在驱动器电容器上的钳位二极管应该阻止来自MAX3232的任何噪声。但事实并非如此。</p>
 <p>因为MAX3232&#x2F;3222是基于电荷泵方法产生负向和正向驱动电压的，所以无法获得平滑的输出电压，只能通过增加电容器来降低开关频率。</p>
-<p>驱动电容器上的信号如下图所示：<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/max3232_driver_noise.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>驱动电容器上的信号如下图所示：<br><img src="max3232_driver_noise.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>尽管经过钳位二极管后，噪声已经“微不足道”了，甚至我的示波器也无法检测到，但仍然有一些噪声信号通过。这导致接收波形的失真。</p>
-<p>这里是没有连接传感器时的波形，当连接传感器时，噪音会降低但仍然存在。同一通道表示驱动器（MAX3232）直接连接到接收器。交叉通道表示来自其他MAX3232或电源等未知源的噪声。<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_noise.png" srcset="/img/loading.gif" lazyload></p>
-<p>下图显示了由于驱动器一侧的噪声引起失真的实际信号。交叉通道的扰动可以忽略不计，但相同通道的扰动确实会影响回波波束的形状。请注意，这里显示的信号是在我将换能器粘贴到框架上之前采集的，因此信号振幅较大。当换能器粘贴到框架上时，失真效应增加，而信号幅度减小。这将导致在测量到达时间时遇到一些问题。<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_signal_distorsion.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里是没有连接传感器时的波形，当连接传感器时，噪音会降低但仍然存在。同一通道表示驱动器（MAX3232）直接连接到接收器。交叉通道表示来自其他MAX3232或电源等未知源的噪声。<br><img src="anemometer_noise.png" srcset="/img/loading.gif" lazyload></p>
+<p>下图显示了由于驱动器一侧的噪声引起失真的实际信号。交叉通道的扰动可以忽略不计，但相同通道的扰动确实会影响回波波束的形状。请注意，这里显示的信号是在我将换能器粘贴到框架上之前采集的，因此信号振幅较大。当换能器粘贴到框架上时，失真效应增加，而信号幅度减小。这将导致在测量到达时间时遇到一些问题。<br><img src="anemometer_signal_distorsion.png" srcset="/img/loading.gif" lazyload></p>
 <p>我尝试了多种方法，包括给MAX3232的电荷泵电容增加容量。这有助于将纹波频率从<code>6.6kHz</code>降低到约<code>3kHz</code>，但对于降低纹波的幅度影响很小。</p>
 <p>后来我发现电荷泵的触发非常简单，一旦电压达到再充电阈值，它就会切换。非常类似于PDM模式的DC&#x2F;DC转换器，低功耗，但噪声较高。这种噪声无法消除。</p>
 <p>在第一版PCB（v1.0）中，我无法通过MAX3232消除这种噪声，因为两个MAX3232的电源由单个P-MOS控制。我无法在一个电源关闭的同时保持另一个电源以驱动换能器。因此，我设计了第二版PCB（v1.1），使用了MAX3222，当前通道在监听回波时,它可以进入关闭模式以停止电荷泵工作。希望这可以解决这些问题。</p>
@@ -419,7 +419,7 @@
 <li>最后归一化到最大值为<code>1</code>。<br>后来我发现数字带通滤波器可以有效降低环境引起的干扰信号。所以我回过头来添加了数字滤波器来平滑信号。这有助于减少检测到的错误峰值的数量。<br>这里使用了一个带通Butterworth滤波器，带宽为<code>40kHz</code>载波频率周围的<code>2kHz</code>或<code>10kHz</code>。</li>
 </ul>
 <p>下面的图像显示了<code>10kHz</code>带宽滤波器的通带。<br>对于信号精度浮点数计算，任何阶数超过<code>4</code>都已经不稳定了。（系数已转换为float32）<br>这里使用了<code>1</code>阶<code>10kHz</code>带宽以获得最大的稳定性。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_digital_filter_response.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_digital_filter_response.png" srcset="/img/loading.gif" lazyload></p>
 <p>目前的滤波器是IIR类型的，但我不太喜欢在这里使用它，因为相位延迟在风速计算中扮演着非常重要的角色。<br>我们来看看是否需要将其替换为FIR滤波器，它在所有频率上具有恒定的相位延迟。</p>
 <h4 id="回波脉冲"><a href="#回波脉冲" class="headerlink" title="回波脉冲"></a>回波脉冲</h4><p>在非编码激励中，回波脉冲的长度比激励脉冲要长得多。</p>
 <p>这是我示波器记录的第一个回波。激励脉冲的长度为<code>4</code>个脉冲。</p>
@@ -445,7 +445,7 @@ uint32_t pulse_len = sizeof(pulse) / sizeof(uint16_t);
 </code></pre>
 <p>在上述列表中，我能够得到最好结果的扩展抑制，它发送了3个正脉冲后跟3个负脉冲。这也是调制频率为<code>13.3kHz</code>的巴克码2。其他方法使信号平坦外，没有任何帮助。</p>
 <p>原因可能是驱动器和换能器的限制，不允许更高的调制频率。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_excitation.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_excitation.png" srcset="/img/loading.gif" lazyload></p>
 <p>Update: 2021-05-13</p>
 <p>之前提到的激励振幅太低了。<br>在风速超过<code>30mph</code>的测试中，它在大多数情况下无法捕捉到回波信号。<br>这里使用了一种新的激励方式：</p>
 <pre><code class="hljs">#define H 98
@@ -455,7 +455,7 @@ uint32_t pulse_len = sizeof(pulse) / sizeof(uint16_t);
 const uint16_t cpulse[] = &#123;P,P,P,P,P,P,N,N,N,N,P,P,N&#125;;
 </code></pre>
 <p>这个模式有<code>6</code>个正相位，将振幅由原来的原来的<code>1950~2150</code>（<code>200</code>）增加到了<code>1830~2270</code>（<code>440</code>）。<br>随后是一些负相位（起到阻尼作用）。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_final_beam.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_final_beam.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="定位回波-峰值匹配"><a href="#定位回波-峰值匹配" class="headerlink" title="定位回波 - 峰值匹配"></a>定位回波 - 峰值匹配</h4><p>我们需要测量声束在路径中传播的时间。因此，我们需要以某种方式识别声束，并测量其传播时间<code>dt</code>。</p>
 <p>在这里，<code>dt</code>通过两个步骤来测量。</p>
 <ul>
@@ -468,22 +468,22 @@ const uint16_t cpulse[] = &#123;P,P,P,P,P,P,N,N,N,N,P,P,N&#125;;
 <p>匹配信号的精度可以达到ADC采样周期时间的分辨率，即<code>~1us @ 1Msps</code>。</p>
 <p>这目前是最不稳定的部分，因为来自驱动器的干扰会影响对回波的检测。<br>有时这种方法会失败，并导致检测偏移一个周期，即<code>25us</code>。</p>
 <p>这里显示了一些（<code>50</code>个）’fault’的信号；这些ADC测量值是在无风时记录的，但无法计算（它们看起来很好）。<br>信号的最大峰值已标记。<br>您可以看到即使在完全无风的状态下，峰值也会出现错位。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_misaligned_peaks.svg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_misaligned_peaks.svg" srcset="/img/loading.gif" lazyload></p>
 <p>实际应用中，在我安静、无风起居室中，大约<code>50</code>次测量中会出现<code>1</code>次不对齐的峰值测量，而在电视旁边则大约每5次测量中的就有1次不对齐的峰值测量。经过均方误差（MSE）峰值匹配后，大多数测量结果可以得到纠正，并仍然能提供良好的风速数据。在12小时的测量中，43200次测量中仅有340次测量出现误差，误差率为<code>0.7%</code>。</p>
 <p>但这未结束，进一步的纠正方法是使用从<code>dt</code>计算得到的声速。如果计算得到的声速与从温度估算得到的声速相差较大，则说明<code>dt</code>测量可能存在错误。一旦检测到错误，立即进行另一次测量。</p>
 <h4 id="Zero-Crossing-detection-and-interpolation"><a href="#Zero-Crossing-detection-and-interpolation" class="headerlink" title="Zero-Crossing detection and interpolation"></a>Zero-Crossing detection and interpolation</h4><p>为了进一步提高 ADC 采样周期的亚位分辨率，即 <code>&lt;1us</code>，我们可以利用插值零交叉点来同时利用采样时刻和 ADC 测量值。</p>
 <p>这种方法也是由 <a target="_blank" rel="noopener" href="https://www.dl1glh.de/ultrasonic-anemometer.html#advancement">Lau 的博客</a> 建议的。</p>
 <p>零交叉的分辨率可以非常高。下面是几百个ADC原始测量值。你可以看到在接近零点的区域，信号呈现线性函数的形状，斜率约为<code>30</code>。这意味着在这种特定情况下，经过插值后，我们可以产生比原来<code>1us</code> 小<code>30</code>倍的分辨率，即<code>33ns</code>。</p>
 <p>斜率越陡，分辨率越高，但精度也取决于信号的分布。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_zero_point.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_zero_point.png" srcset="/img/loading.gif" lazyload></p>
 <p>这种方法需要对原始信号进行稳定的零位校准，该过程在第一步的预处理中进行。每个通道的零偏差在上电时，通过测量和平均没有发送激励的时信号进行校准，大约需要约 <code>1</code> 秒的时间。零位校准也可以在操作过程中进行，例如每小时或每发生 <code>1℃</code> 温度变化时进行校准，以最大化准确性。</p>
 <p>因为所有 <code>4</code> 个通道共享同一个放大器，所以它们也共享微小的偏置（如果有的话），这将被抵消掉。每个通道的实际零偏差都在 <code>2046~2047</code> 附近，非常稳定和准确。但偶尔会出现某个或所有通道存在一些偏差，如下图所示。东和西通道的偏移向上漂移。这个测量结果被故障检测所丢弃（西通道也有相当大的形变）。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_zero_offset_example.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_zero_offset_example.png" srcset="/img/loading.gif" lazyload></p>
 <p>在启动时，我们可以采集一组零交叉点，用于无风状态的校准。在后续的测量中，为了避免上述的偏差问题，我们采用动态归零方法。在每次测量开始之前，我们进行一次不发送激励信号的ADC测量，以获得实时零点，消除来自电源或其他因素的偏差。</p>
 <p>对于每个通道，我们在每个回波的最大幅值周围插值<code>6</code>个零交叉点。因为峰值周围的波形是最相似的。这些零交叉点取平均并产生一个数值，代表这些交叉点的位置。我们发现它们的平均值非常稳定，因此不需要比较所有的零交叉时刻。</p>
 <p>这样可以实现相当稳定的亚位级精度，至少在无风状态下是如此。一个简单的测试结果显示，原始测量值的标准误差为<code>0.037us</code>，已经非常接近我们计算的理论分辨率（相当于<code>0.051m/s</code>）。通过对几次测量进行平均，可以获得更好的精度。与其他参数一样，测量速率和过采样率可以通过配置文件进行设置。这种简单处理可以提供的精度水平已经非常令人期待！</p>
 <p>下图显示了北-南方向的第一个风速测量结果。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/first_windspeed_measurement.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="first_windspeed_measurement.png" srcset="/img/loading.gif" lazyload></p>
 <p>Update: 2021-05-13</p>
 <p>现在不需要启动时进行 ADC 零校准了。相反，我在每次采样之前添加了没有激励的 ADC 采样。这样我们可以在实际测量阶段之前进行动态零校准。因此，通过温度或电源引起的偏移可以被最小化。</p>
 <h4 id="脉冲压缩"><a href="#脉冲压缩" class="headerlink" title="脉冲压缩"></a>脉冲压缩</h4><p>脉冲压缩在雷达系统中非常常见，Lau的工作也使用了脉冲压缩技术，但我不确定他是如何使用的。如果<strong>峰值匹配</strong>方法的稳定性不够，我将尝试使用巴克码（<code>barker-code</code>）实现编码激励。</p>
@@ -518,18 +518,18 @@ c = (ns_c + ew_c) / 2;
 course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
 </code></pre>
 <p>一次夜间的静风测量显示，测量得到的声速与由温度估算的声速相当匹配。下面的测量温度范围为<code>20.4℃</code>至<code>25.6℃</code>。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_speed_of_sound.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_speed_of_sound.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="故障检测和修正"><a href="#故障检测和修正" class="headerlink" title="故障检测和修正"></a>故障检测和修正</h4><p>来自环境噪声或其他板载电子器件的干扰源很多，有时会导致信号变形，正如我之前提到的那样。确实还有其他我无法发现的隐藏干扰源。</p>
 <p>由于对低功耗的要求，我没有实现任何滤波器来检测基于先前测量的最终结果。因为如果设备需要休眠长达30秒，风速的差异可能非常大。</p>
 <p><strong>波束不对齐</strong></p>
 <p>在检测波束不对齐的情况下，如我在<strong>峰值匹配</strong>中提到的，<br>我还计算了MSE误差的历史记录，并且在每次MSE计算时以较低的速率进行更新。<br>为历史MSE添加了一个硬阈值，以设置最终的MSE阈值。<br>这种方法可以有效地过滤掉大约9&#x2F;10的波束不对齐情况，这些情况不能通过简单的最小MSE恢复。<br>下面是一个演示，展示了动态MSE和最终阈值。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_mse_threshold.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_mse_threshold.png" srcset="/img/loading.gif" lazyload></p>
 <p><strong>声速保护</strong></p>
 <p>还有一种最终的保护措施可用于检测错误，即从<code>dt</code>计算得出的声速。<br>声速测量非常稳定，可以通过其他传感器测量的温度进行估计。<br>通过温度估算的风速与通过<code>dt</code>估算的风速之间的差异通常小于<code>2&lt;m/s</code>。<br>差异阈值设定为<code>5m/s</code>。</p>
 <p>如果在任何通道中检测到上述任何错误，则当前测量将被丢弃，并立即进行新的测量。</p>
 <h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>为了帮助调试，一旦检测到故障，<code>4</code>个通道的ADC测量结果将被记录到SD卡中。<br>实际上，上述部分显示的大多数故障数据都是从这些记录数据中绘制出来的。</p>
 <p>我还编写了一些Python脚本来对数据进行后处理，以及一些Processing3脚本来实时显示数据。<br>它们非常有帮助。以下是Processing3脚本绘制<code>4</code>个通道的实时数据的屏幕录制。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_processing3_demo.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_processing3_demo.gif" srcset="/img/loading.gif" lazyload></p>
 <p>Overall, I would like to repeat what Lau has said in his blog “building the anemometer is definitely not as easy as I thought.” </p>
 <h4 id="时间控制"><a href="#时间控制" class="headerlink" title="时间控制"></a>时间控制</h4><p>对于每个通道，测量会在开始时切换模拟信号路径并使能专用的驱动器。<br>然后我们等待<code>4ms</code>，让信号路径稳定，并让驱动器充能至其补充电势（小于<code>150us</code>）。</p>
 <p>我们进行一次<code>空闲</code>测量（无激励）以获取ADC测量的零点，这需要<code>1ms</code>。</p>
@@ -538,7 +538,7 @@ course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
 <p>一旦所有<code>4</code>个通道的数据采样完成，那么就会执行上述部分提到的所有数据处理操作。<br>整个处理过程需要<code>19ms</code>的时间。因此，每次测量需要<code>19+25=44ms</code>。</p>
 <p>测量和处理时间比我预期的要短。这要归功于<strong>峰值匹配</strong>方法，相对于其他相关方法而言，它的计算开销较小。</p>
 <p>总体而言，我对处理时间非常满意，小于<code>50ms</code>的处理时间允许MCU和模拟电路休眠更长时间以节省功耗。<br>一旦检测到故障，我们仍然有足够的时间来进行更多的采样，以获得正确的测量结果。或者，在功耗不是问题的情况下，可以每秒进行高达<code>20</code>倍的过采样，以获得更高的精度。</p>
-<h4 id="处理方法总结"><a href="#处理方法总结" class="headerlink" title="处理方法总结"></a>处理方法总结</h4><p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_windspeed_measurement.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="处理方法总结"><a href="#处理方法总结" class="headerlink" title="处理方法总结"></a>处理方法总结</h4><p><img src="anemometer_windspeed_measurement.png" srcset="/img/loading.gif" lazyload></p>
 <p>通过使用上述的处理方法，风速测量仪现在能够产生相当稳定的测量结果。上述的1小时测量是在一个有风、晴朗下午进行的，没有出现任何不可恢复的故障。</p>
 <p>主要的困难包括：</p>
 <ul>
@@ -553,13 +553,13 @@ course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
 <li>在1号区域存在的物体会导致所有测量失败。</li>
 <li>在2号区域存在的物体会导致校准失败，但上述算法仍然能够产生稳定的测量结果。</li>
 </ul>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_keep_out_zone.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_keep_out_zone.png" srcset="/img/loading.gif" lazyload></p>
 <p>当一只鸟停在反射板上时，很有可能造成测量完全失败。</p>
 <h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><h3 id="车载测试"><a href="#车载测试" class="headerlink" title="车载测试"></a>车载测试</h3><p>我使用一个直径为<code>88mm</code>的磁性车顶安装支架将QingStation安装在汽车车顶上。我使用了一些3D打印的零件和一个<code>38 x 2.2cm</code>的PVC管将其抬高了一点，这样车辆产生的压缩气流就不会对其产生太大影响。从车顶到QingStation顶部的实际高度为<code>55cm</code>。汽车的高度为<code>1410mm</code>，所以总高度略小于<code>2m</code>。</p>
-<p>第一次测试：<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment2.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>第二次测试：<br><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment1.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>第一次测试：<br><img src="anemometer_car_experiment2.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>第二次测试：<br><img src="anemometer_car_experiment1.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>GNSS速度和风速测量的比较。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_gnss_vs_wind.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_gnss_vs_wind.png" srcset="/img/loading.gif" lazyload></p>
 <p>风速测量结果高于GNSS速度。</p>
 <ul>
 <li>这可能是因为位置仍处于车辆压缩气泡内，空气速度被压缩和增加。</li>
@@ -568,9 +568,9 @@ course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
 <li>或者是风。</li>
 </ul>
 <p>下面是风速测量和30秒平均值的图表。30秒平均值更有意义。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_windspeed.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="anemometer_car_windspeed.png" srcset="/img/loading.gif" lazyload></p>
 <p>大部分时间，我们停在道路中间等待5或6辆过往的列车。幸运的是，我们是队列中的第一辆车，所以我享受了观看它们的时间。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_car_experiment3.jpg" srcset="/img/loading.gif" lazyload alt="anemometer_car_experiment3"></p>
+<p><img src="anemometer_car_experiment3.jpg" srcset="/img/loading.gif" lazyload alt="anemometer_car_experiment3"></p>
 <h3 id="高速公路测试"><a href="#高速公路测试" class="headerlink" title="高速公路测试"></a>高速公路测试</h3><p>我打印了一个较短的支杆以降低重心。计划是在高风速下测试风速计，因为这从未尝试过。</p>
 <p>我只安装了雨量传感器镜头，将其安装在通风孔上。然后…很快就遇到了大雨。</p>
 <p>不幸的是，SD卡在刚开始遇到降雨时就出现故障。在大雨中，QingStation继续发送MQTT消息，直到我们到达目的地（Durdle Door）为止。</p>
@@ -584,7 +584,7 @@ course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
 <li>日志记录失败，MQTT消息未保存，所以我不知道出了什么问题。</li>
 </ul>
 <p>一切干燥后，它们都恢复正常工作。</p>
-<p><img src="/Ultrasonic-Anemometer-Design-and-Practice/anemometer_motorway_rain.png" srcset="/img/loading.gif" lazyload alt="anemometer_motorway_rain"></p>
+<p><img src="anemometer_motorway_rain.png" srcset="/img/loading.gif" lazyload alt="anemometer_motorway_rain"></p>
 <p>日志显示在小于<code>72km/h</code>（<code>20m/s</code>）的风速下，测量结果呈现完美的跟随性，但在<code>108km/h</code>（<code>30m/s</code>）时开始出现故障。<br>这也可以从错误代码（未列出）中看出。风速计在高速（<code>30m/s</code>）时开始有些挣扎，几乎每<code>3s</code>报告一次错误。但它仍然可以在<code>1s</code>的记录周期内提供良好的测量结果。但是有3次测量失败，报告的风速甚至达到200km&#x2F;h。</p>
 <p>我认为这个结果是可以接受的，因为大于<code>20m/s</code>的风速并不是始终存在的。</p>
 <p>由于安装点较低，风速计受到的空气加速效应比之前的低速测试更大。我认为这在正常范围内。但由于我无法使用到风洞来校准传感器，所以我无法进一步进行标定工作。</p>
