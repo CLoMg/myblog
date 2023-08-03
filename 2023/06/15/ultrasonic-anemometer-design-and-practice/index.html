@@ -49,7 +49,7 @@
 <meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_car_experiment3.jpg">
 <meta property="og:image" content="http://clomg.github.io/2023/06/15/ultrasonic-anemometer-design-and-practice/anemometer_motorway_rain.png">
 <meta property="article:published_time" content="2023-06-15T09:07:00.000Z">
-<meta property="article:modified_time" content="2023-06-16T02:23:28.683Z">
+<meta property="article:modified_time" content="2023-06-16T02:39:18.031Z">
 <meta property="article:author" content="CLoMg">
 <meta property="article:tag" content="风速风向">
 <meta property="article:tag" content="超声波">
@@ -331,6 +331,7 @@
 <p><a target="_blank" rel="noopener" href="https://www.dl1glh.de/ultrasonic-anemometer.html#advancement">Lau</a><br>在其发布的所有相关方程式中提供了详细说明（使用了不同的符号表示）。 </p>
 <p>In C language:</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class=" language-hljs processing"><span class="hljs-built_in">alpha</span> = <span class="hljs-built_in">atan</span>(<span class="hljs-number">2</span>*H/D);<br>v = H/<span class="hljs-built_in">sin</span>(<span class="hljs-built_in">alpha</span>)*<span class="hljs-built_in">cos</span>(<span class="hljs-built_in">alpha</span>)*(<span class="hljs-number">1</span>/t1 - <span class="hljs-number">1</span>/t2);<span class="hljs-comment">// wind speed</span><br>c = H/<span class="hljs-built_in">sin</span>(<span class="hljs-built_in">alpha</span>)*(<span class="hljs-number">1</span>/t1 + <span class="hljs-number">1</span>/t2);           <span class="hljs-comment"><code class="language-hljs processing"><span class="hljs-built_in">alpha</span> = <span class="hljs-built_in">atan</span>(<span class="hljs-number">2</span>*H/D);<br>v = H/<span class="hljs-built_in">sin</span>(<span class="hljs-built_in">alpha</span>)*<span class="hljs-built_in">cos</span>(<span class="hljs-built_in">alpha</span>)*(<span class="hljs-number">1</span>/t1 - <span class="hljs-number">1</span>/t2);<span class="hljs-comment">// wind speed</span><br>c = H/<span class="hljs-built_in">sin</span>(<span class="hljs-built_in">alpha</span>)*(<span class="hljs-number">1</span>/t1 + <span class="hljs-number">1</span>/t2);           <span class="hljs-comment">// sound speed</span><br></code></pre></td></tr></table></figure>
+
 <p>为了测量风向，可以使用<code>arctan2</code>函数对两个垂直的方向进行计算。</p>
 <figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs xl"><span class="hljs-function"><span class="hljs-title">beta</span> = atan2(NS, EW);  // north-&gt;</span><span class="hljs-function"><span class="hljs-title"><code class="language-hljs xl"><span class="hljs-function"><span class="hljs-title">beta</span> = atan2(NS, EW);  // north-&gt;</span><span class="hljs-function"><span class="hljs-title">south</span>, east-></span>west<br></code></pre></td></tr></table></figure>
 
@@ -684,6 +685,12 @@ course = atan2f(-ew_v, -ns_v) / 3.1415926 * 180 + 180;
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/08/03/cheng-du-an-ke-xin/" title="成都安可信">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">成都安可信</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
