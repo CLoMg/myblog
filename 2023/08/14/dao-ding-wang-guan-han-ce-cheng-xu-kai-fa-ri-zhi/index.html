@@ -16,22 +16,24 @@
   <meta name="author" content="CLoMg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="简介成都安可信电子股份有限公司四川省成都市双流西南航空港经济开发区物联网产业园区物联西街88号行业 ：气体监测 （工业&#x2F;市政&#x2F;民用）招聘公告：    单片机软件开发工程师 15-22K·15薪 成都 3-5年 本科职位描述：CSTM32开发ARM开发     完成项目需求分解、系统设计报告编写、详细设计报告编写。  完成软件代码编写和软硬件联调测试。 独立完成软件模块测试用例的">
+    <meta name="description" content="前言针对旧版道钉网关（V1.2）开发的厂测程序，主要功能是出厂时检测产品各个功能模块是否正常运行，并通过上位机打印测试信息、手动确认部分需要人工确认的功能模块、记录信息或直接连接打印机，打印标签； 详细设计嵌软部分进入厂测硬件上电后，通过串口指令，或引脚电压，进入厂测模式。 厂测功能 程序自动确认部分    SW LED 亮度 电池电压   人工确认部分  RS485 Flash LORA(1&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="成都安可信">
-<meta property="og:url" content="http://clomg.github.io/2023/08/03/cheng-du-an-ke-xin/index.html">
+<meta property="og:title" content="道钉网关厂测程序开发日志">
+<meta property="og:url" content="http://clomg.github.io/2023/08/14/dao-ding-wang-guan-han-ce-cheng-xu-kai-fa-ri-zhi/index.html">
 <meta property="og:site_name" content="CLoMg">
-<meta property="og:description" content="简介成都安可信电子股份有限公司四川省成都市双流西南航空港经济开发区物联网产业园区物联西街88号行业 ：气体监测 （工业&#x2F;市政&#x2F;民用）招聘公告：    单片机软件开发工程师 15-22K·15薪 成都 3-5年 本科职位描述：CSTM32开发ARM开发     完成项目需求分解、系统设计报告编写、详细设计报告编写。  完成软件代码编写和软硬件联调测试。 独立完成软件模块测试用例的">
+<meta property="og:description" content="前言针对旧版道钉网关（V1.2）开发的厂测程序，主要功能是出厂时检测产品各个功能模块是否正常运行，并通过上位机打印测试信息、手动确认部分需要人工确认的功能模块、记录信息或直接连接打印机，打印标签； 详细设计嵌软部分进入厂测硬件上电后，通过串口指令，或引脚电压，进入厂测模式。 厂测功能 程序自动确认部分    SW LED 亮度 电池电压   人工确认部分  RS485 Flash LORA(1&amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-03T01:56:15.000Z">
-<meta property="article:modified_time" content="2023-08-03T02:26:02.798Z">
+<meta property="article:published_time" content="2023-08-14T08:27:22.000Z">
+<meta property="article:modified_time" content="2023-08-14T09:29:38.002Z">
 <meta property="article:author" content="CLoMg">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="LORA">
+<meta property="article:tag" content="GPS">
+<meta property="article:tag" content="CAT-1">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>成都安可信 - CLoMg</title>
+  <title>道钉网关厂测程序开发日志 - CLoMg</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="成都安可信"></span>
+            <span id="subtitle" data-typed-text="道钉网关厂测程序开发日志"></span>
           
         </div>
 
@@ -223,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-03 09:56" pubdate>
-          2023年8月3日 上午
+        <time datetime="2023-08-14 16:27" pubdate>
+          2023年8月14日 下午
         </time>
       </span>
     
@@ -235,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          605 字
+          834 字
         
       </span>
     
@@ -246,7 +248,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -284,47 +286,40 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">成都安可信</h1>
+            <h1 style="display: none">道钉网关厂测程序开发日志</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a target="_blank" rel="noopener" href="http://action98.com/index.html#home">成都安可信电子股份有限公司</a><br>四川省成都市双流西南航空港经济开发区物联网产业园区物联西街88号<br>行业 ：气体监测 （工业&#x2F;市政&#x2F;民用）<br>招聘公告：  </p>
-<blockquote>
-<p>单片机软件开发工程师 15-22K·15薪 成都 3-5年 本科<br>职位描述：<br>CSTM32开发<br>ARM开发  </p>
-</blockquote>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>针对旧版道钉网关（V1.2）开发的厂测程序，主要功能是出厂时检测产品各个功能模块是否正常运行，并通过上位机打印测试信息、手动确认部分需要人工确认的功能模块、记录信息或直接连接打印机，打印标签；</p>
+<h1 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h1><h2 id="嵌软部分"><a href="#嵌软部分" class="headerlink" title="嵌软部分"></a>嵌软部分</h2><h3 id="进入厂测"><a href="#进入厂测" class="headerlink" title="进入厂测"></a>进入厂测</h3><p>硬件上电后，通过串口指令，或引脚电压，进入厂测模式。</p>
+<h3 id="厂测功能"><a href="#厂测功能" class="headerlink" title="厂测功能"></a>厂测功能</h3><ol>
+<li><p>程序自动确认部分  </p>
 <ol>
-<li>完成项目需求分解、系统设计报告编写、详细设计报告编写。 </li>
-<li>完成软件代码编写和软硬件联调测试。</li>
-<li>独立完成软件模块测试用例的设计和编写，并完成单元测试。 </li>
-<li>软件模块化开发和规划整理。</li>
-<li>重点技术预研提升。</li>
-<li>负责项目流程中软件相关文件编制，如产品使用说明书、程序下载说明等。  <blockquote>
-<p>任职资格：  </p>
+<li>SW</li>
+<li>LED</li>
+<li>亮度</li>
+<li>电池电压</li>
+</ol>
+</li>
+<li><p>人工确认部分</p>
+<ol>
+<li>RS485</li>
+<li>Flash</li>
+<li>LORA(1&#x2F;2)</li>
+<li>CAT-1</li>
+<li>ETH</li>
+<li>ATGM332D-5N<br> 简介：<blockquote>
+<p> <a target="_blank" rel="noopener" href="https://www.icofchina.com/d/file/xiazai/2019-05-17/c21c5d3c1998ecab022b34809347f817.pdf" title="模块说明书">ATGM332D-5N 系列模块是 12X16 尺寸的高性能 BDS&#x2F;GNSS 全星座定位导<br> 航模块系列的总称。该系列模块产品都是基于中科微第四代低功耗 GNSS SOC<br> 单芯片—AT6558，支持多种卫星导航系统，包括中国的 BDS（北斗卫星导航系<br> 统），美国的 GPS，俄罗斯的 GLONASS，欧盟的 GALILEO，日本的 QZSS 以<br> 及卫星增强系统 SBAS（WAAS，EGNOS，GAGAN，MSAS）。AT6558 是一款<br> 真正意义的六合一多模卫星导航定位芯片，包含 32 个跟踪通道，可以同时接收<br> 六个卫星导航系统的 GNSS 信号，并且实现联合定位、导航与授时.</a></p>
 </blockquote>
 </li>
-<li>本科或以上学历，电子信息工程、通信、计算机等相关专业。3年以上工作经验。</li>
-<li>熟练掌握嵌入式软件C、C++编程，拥有嵌入式实时操作系统的移植和开发经验，例如uc&#x2F;os-ii、FreeRTOS等</li>
-<li>具备独立完成软件功能模块设计和编写的能力。</li>
-<li>拥有电子电路硬件基础，协助硬件工程师完成原理图设计。 </li>
-<li>具备常用物联网模块开发经验，如NB-ioT、4G、蓝牙、WiFi、LORA等。</li>
 </ol>
-<h1 id="面试流程"><a href="#面试流程" class="headerlink" title="面试流程"></a>面试流程</h1><h2 id="简历投递"><a href="#简历投递" class="headerlink" title="简历投递"></a>简历投递</h2><pre><code class="hljs">2023.08.02 投递简历
-</code></pre>
-<h2 id="电话沟通"><a href="#电话沟通" class="headerlink" title="电话沟通"></a>电话沟通</h2><pre><code class="hljs">2023.08.03 电话沟通
-</code></pre>
-<h3 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h3><ol>
-<li>九通<br>主要工作？是单片机开发吗？</li>
-<li>四川益丰<br>主要工作</li>
-<li>期望薪酬？<br>20~25K</li>
-<li>目前薪酬？<br>基本+绩效 15k 不含项目奖金</li>
-<li>离职原因？<br>现在主要做应用方向，想换个方向做偏底层的开发（感觉回答得不是很满意）</li>
+<p> 连接： ATGM332D-5N(后文中称GPS模块)在道钉V1.2PCB中，通过USART2与MCU进行连接，但是根据原理图可以看出来，MCU仅USART2 RX引脚（PA3）与GPS模块连接，未使用TX功能。此外，还使用PA3（output）作为GPS_EN引脚，PA1(input)作为GPS_1PPS输入引脚。  </p>
+<p> 开发：<br> USART2 – uart driver  （open&#x2F;read&#x2F;write&#x2F;io_ctrl_close）<br> ATGM332D   – ATGM332D driver    （open&#x2F;read&#x2F;write&#x2F;io_ctrl&#x2F;close)<br> GPS – (info struct)</p>
+</li>
 </ol>
-<h3 id="邀请去公司面试"><a href="#邀请去公司面试" class="headerlink" title="邀请去公司面试"></a>邀请去公司面试</h3><ol>
-<li>约面试时间<br>未确定</li>
-<li>面试流程<br>HR初面<br>技术主管二面</li>
-</ol>
-
+<h3 id="退出厂测"><a href="#退出厂测" class="headerlink" title="退出厂测"></a>退出厂测</h3><h2 id="上位机部分"><a href="#上位机部分" class="headerlink" title="上位机部分"></a>上位机部分</h2><p>上位机部分拟用QT开发</p>
+<h3 id="信息输出"><a href="#信息输出" class="headerlink" title="信息输出"></a>信息输出</h3><h3 id="功能确认"><a href="#功能确认" class="headerlink" title="功能确认"></a>功能确认</h3><h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><h3 id="标签制作"><a href="#标签制作" class="headerlink" title="标签制作"></a>标签制作</h3><h3 id="标签打印"><a href="#标签打印" class="headerlink" title="标签打印"></a>标签打印</h3>
                 
               </div>
             
@@ -342,7 +337,17 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B1%82%E8%81%8C/" class="category-chain-item">求职</a>
+  <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="category-chain-item">嵌入式</a>
+  
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C/" class="category-chain-item">工作</a>
   
   
 
@@ -357,7 +362,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
+        <a href="/tags/LORA/">#LORA</a>
+      
+        <a href="/tags/GPS/">#GPS</a>
+      
+        <a href="/tags/CAT-1/">#CAT-1</a>
       
     </div>
   
@@ -369,8 +378,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>成都安可信</div>
-      <div>http://clomg.github.io/2023/08/03/cheng-du-an-ke-xin/</div>
+      <div>道钉网关厂测程序开发日志</div>
+      <div>http://clomg.github.io/2023/08/14/dao-ding-wang-guan-han-ce-cheng-xu-kai-fa-ri-zhi/</div>
     </div>
     <div class="license-meta">
       
@@ -382,13 +391,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月3日</div>
+          <div>2023年8月14日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年8月3日</div>
+          <div>2023年8月14日</div>
         </div>
       
       
@@ -419,18 +428,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/14/dao-ding-wang-guan-han-ce-cheng-xu-kai-fa-ri-zhi/" title="道钉网关厂测程序开发日志">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">道钉网关厂测程序开发日志</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/06/15/ultrasonic-anemometer-design-and-practice/" title="超声波风速风向测量仪的设计与实践">
-                        <span class="hidden-mobile">超声波风速风向测量仪的设计与实践</span>
+                      <a href="/2023/08/03/cheng-du-an-ke-xin/" title="成都安可信">
+                        <span class="hidden-mobile">成都安可信</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

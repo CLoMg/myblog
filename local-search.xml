@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>道钉网关厂测程序开发日志</title>
+    <link href="/2023/08/14/dao-ding-wang-guan-han-ce-cheng-xu-kai-fa-ri-zhi/"/>
+    <url>/2023/08/14/dao-ding-wang-guan-han-ce-cheng-xu-kai-fa-ri-zhi/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>针对旧版道钉网关（V1.2）开发的厂测程序，主要功能是出厂时检测产品各个功能模块是否正常运行，并通过上位机打印测试信息、手动确认部分需要人工确认的功能模块、记录信息或直接连接打印机，打印标签；</p><h1 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h1><h2 id="嵌软部分"><a href="#嵌软部分" class="headerlink" title="嵌软部分"></a>嵌软部分</h2><h3 id="进入厂测"><a href="#进入厂测" class="headerlink" title="进入厂测"></a>进入厂测</h3><p>硬件上电后，通过串口指令，或引脚电压，进入厂测模式。</p><h3 id="厂测功能"><a href="#厂测功能" class="headerlink" title="厂测功能"></a>厂测功能</h3><ol><li><p>程序自动确认部分  </p><ol><li>SW</li><li>LED</li><li>亮度</li><li>电池电压</li></ol></li><li><p>人工确认部分</p><ol><li>RS485</li><li>Flash</li><li>LORA(1&#x2F;2)</li><li>CAT-1</li><li>ETH</li><li>ATGM332D-5N<br> 简介：<blockquote><p> <a href="https://www.icofchina.com/d/file/xiazai/2019-05-17/c21c5d3c1998ecab022b34809347f817.pdf" title="模块说明书">ATGM332D-5N 系列模块是 12X16 尺寸的高性能 BDS&#x2F;GNSS 全星座定位导<br> 航模块系列的总称。该系列模块产品都是基于中科微第四代低功耗 GNSS SOC<br> 单芯片—AT6558，支持多种卫星导航系统，包括中国的 BDS（北斗卫星导航系<br> 统），美国的 GPS，俄罗斯的 GLONASS，欧盟的 GALILEO，日本的 QZSS 以<br> 及卫星增强系统 SBAS（WAAS，EGNOS，GAGAN，MSAS）。AT6558 是一款<br> 真正意义的六合一多模卫星导航定位芯片，包含 32 个跟踪通道，可以同时接收<br> 六个卫星导航系统的 GNSS 信号，并且实现联合定位、导航与授时.</a></p></blockquote></li></ol><p> 连接： ATGM332D-5N(后文中称GPS模块)在道钉V1.2PCB中，通过USART2与MCU进行连接，但是根据原理图可以看出来，MCU仅USART2 RX引脚（PA3）与GPS模块连接，未使用TX功能。此外，还使用PA3（output）作为GPS_EN引脚，PA1(input)作为GPS_1PPS输入引脚。  </p><p> 开发：<br> USART2 – uart driver  （open&#x2F;read&#x2F;write&#x2F;io_ctrl_close）<br> ATGM332D   – ATGM332D driver    （open&#x2F;read&#x2F;write&#x2F;io_ctrl&#x2F;close)<br> GPS – (info struct)</p></li></ol><h3 id="退出厂测"><a href="#退出厂测" class="headerlink" title="退出厂测"></a>退出厂测</h3><h2 id="上位机部分"><a href="#上位机部分" class="headerlink" title="上位机部分"></a>上位机部分</h2><p>上位机部分拟用QT开发</p><h3 id="信息输出"><a href="#信息输出" class="headerlink" title="信息输出"></a>信息输出</h3><h3 id="功能确认"><a href="#功能确认" class="headerlink" title="功能确认"></a>功能确认</h3><h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><h3 id="标签制作"><a href="#标签制作" class="headerlink" title="标签制作"></a>标签制作</h3><h3 id="标签打印"><a href="#标签打印" class="headerlink" title="标签打印"></a>标签打印</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>嵌入式</category>
+      
+      <category>工作</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LORA</tag>
+      
+      <tag>GPS</tag>
+      
+      <tag>CAT-1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>成都安可信</title>
     <link href="/2023/08/03/cheng-du-an-ke-xin/"/>
     <url>/2023/08/03/cheng-du-an-ke-xin/</url>
